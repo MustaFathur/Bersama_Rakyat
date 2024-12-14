@@ -22,17 +22,9 @@ const Navbar = () => {
                 <div className="hidden lg:flex flex-none text-white">
                     <ul className="menu menu-horizontal px-1">
                         <li><a href="/" className="hover:bg-red-700">Beranda</a></li>
-                        <li>
-                            <details>
-                                <summary className="hover:bg-red-700">Program Pemerintah</summary>
-                                <ul className="bg-red-700 text-white rounded-t-none p-2 shadow-lg">
-                                    <li><a className="hover:bg-red-800">Pemerintahan Pusat</a></li>
-                                    <li><a className="hover:bg-red-800">Pemerintahan Daerah</a></li>
-                                </ul>
-                            </details>
-                        </li>
+                        <li><a href="/program" className="hover:bg-red-700">Program Pemerintah</a></li>
                         <li><a href="/forum" className="hover:bg-red-700">Forum</a></li>
-                        <li><a href="/forum" className="hover:bg-red-700">Berita</a></li>
+                        <li><a href="/berita" className="hover:bg-red-700">Berita</a></li>
                     </ul>
                 </div>
 

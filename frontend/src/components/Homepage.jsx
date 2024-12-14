@@ -25,36 +25,36 @@ const Homepage = () => {
   ];
 
   const discussions = [
-    {
-      tag: "prokerSpreaded2024",
+    {   
+      tag: "IKN #Infrastruktur2024",
       title: "Evaluasi Program Pembangunan Infrastruktur 2024",
       description: "Analisis mendalam mengenai pencapaian dan tantangan dalam program pembangunan infrastruktur nasional tahun 2024.",
       views: "1,231",
       comments: "85",
-      image: "/Proker.png",
-      author: "Ahmad Sudrajat",
+      image: "/pp1.jpeg",
+      author: "Prof. Khalied",
       timeAgo: "2 jam yang lalu",
       category: "Infrastruktur"
     },
     {
-      tag: "pendidikan2024",
+      tag: "Pendidikan2024 #KurikulumMerdeka",
       title: "Implementasi Kurikulum Baru di Sekolah Negeri",
       description: "Pembahasan mengenai efektivitas dan tantangan dalam penerapan kurikulum pendidikan terbaru di sekolah negeri.",
       views: "958",
       comments: "67",
-      image: "/Proker.png",
-      author: "Siti Rahma",
+      image: "/pp2.jpeg",
+      author: "Talitha",
       timeAgo: "4 jam yang lalu",
       category: "Pendidikan"
     },
     {
-      tag: "kesehatanPublik",
+      tag: "KesehatanPublik #BPJS",
       title: "Peningkatan Layanan BPJS di Daerah Terpencil",
       description: "Evaluasi dan solusi untuk meningkatkan akses layanan kesehatan BPJS di daerah-daerah terpencil Indonesia.",
       views: "847",
       comments: "45",
-      image: "/Proker.png",
-      author: "Dr. Bambang",
+      image: "/pp3.jpeg",
+      author: "Dr. Nouval",
       timeAgo: "5 jam yang lalu",
       category: "Kesehatan"
     }
@@ -257,7 +257,13 @@ const Homepage = () => {
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-gray-200" />
+                      <div className="w-8 h-8 rounded-full bg-gray-200">
+                        <img
+                          src={discussion.image}
+                          alt="Author"
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                        </div>
                       <div>
                         <p className="text-sm font-medium">{discussion.author}</p>
                         <p className="text-xs text-gray-500">{discussion.timeAgo}</p>
@@ -272,7 +278,7 @@ const Homepage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-red-700/5">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-4xl font-bold">Bergabung Sekarang</h2>
