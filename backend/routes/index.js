@@ -1,13 +1,36 @@
 var express = require("express");
 var router = express.Router();
+const { Program, Lembaga } = require('../models/index');
 
-/* GET home page. */
-router.get("/", function (req, res, next) {
-  res.send("Hello World");
+// Rute untuk mendapatkan semua lembaga
+router.get("/lembaga", async (req, res) => {
+  try {
+    const lembaga = await Lembaga.findAll();
+    res.json(lembaga);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
-router.get("/api", (req, res) => {
-  res.json({ message: "Hello from server!" });
+// Rute untuk mendapatkan program berdasarkan ID lembaga (dengan data lembaga disertakan)
+router.get("/lembaga/:id/program", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const program = await Program.findAll({
+      where: {
+        idLembaga: id,
+      },
+      include: [
+        {
+          model: Lembaga,
+          as: 'lembaga', // Alias relasi dari model
+        },
+      ],
+    });
+    res.json(program);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
 module.exports = router;
