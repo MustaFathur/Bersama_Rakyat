@@ -30,7 +30,7 @@ const governmentData = [
     },
     {
         title: "Badan Pemeriksaan Keuangan",
-        image: "/bpk.png",
+        image: "/badan-pemeriksa-keuangan.png",
         link: "/pemerintahan/bpk"
     }
 ];
